@@ -36,7 +36,7 @@ let tags = {
 const defaultMenu = {
   before: `
 Hai, %ucapan %name! 👋
-  
+Script bot: https://youtu.be/RMixpZRoDOk
 *Waktu:* 
 %wib WIB
 %wita WITA
