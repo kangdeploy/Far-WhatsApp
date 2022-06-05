@@ -35,8 +35,8 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 👋
-Script bot: https://youtu.be/RMixpZRoDOk
+Hai, %ucapan %name! 🍟
+  
 *Waktu:* 
 %wib WIB
 %wita WITA
@@ -157,10 +157,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://Fardev78.com.id', 'Website', '', '', [
-      ['Script bot', '/donasi'],
-      ['Sewa Bot', '/sewa'],
-      ['Owner', '/owner']
+    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://nekopoi.care', 'Website', '', '', [
+      ['Pemilik bot', '/owner']
     ], m)
     /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
     let res = await fetch(url)
