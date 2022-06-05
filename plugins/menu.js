@@ -158,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://Fardev78.com.id', 'Website', '', '', [
-      ['Donate', '/donasi'],
+      ['Script bot', '/donasi'],
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)
