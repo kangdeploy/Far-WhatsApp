@@ -35,16 +35,15 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 👋
+Hai, %ucapan %name! 🍟
   
-*Waktu:* 
+*INFORMATION:* 
 %wib WIB
 %wita WITA
 %wit WIT
-☕*Hari:* %week
-🗓️*Tanggal:* %date
-
-⏳*Uptime:* %uptime (%muptime)
+☕ *Hari:* %week
+🗓️ *Tanggal:* %date
+⏳ *Uptime:* %uptime (%muptime)
 
 *Limit:* %limit
 *Level:* %level
