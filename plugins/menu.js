@@ -35,15 +35,16 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 🍟
+Hai, %ucapan %name! 👋
   
 *Waktu:* 
 %wib WIB
 %wita WITA
 %wit WIT
-*Hari:* %week
-*Tanggal:* %date
-*Uptime:* %uptime (%muptime)
+☕*Hari:* %week
+🗓️*Tanggal:* %date
+
+⏳*Uptime:* %uptime (%muptime)
 
 *Limit:* %limit
 *Level:* %level
@@ -52,8 +53,8 @@ Hai, %ucapan %name! 🍟
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
   footer: '\n',
-  after: `*Made by ♡*
-*%npmname* | %version
+  after: `*Date*
+*%date* | %week
 ${'```%npmdesc```'}
 `,
 }
@@ -129,8 +130,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '(Ⓛ)' : '')
-                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
+                .replace(/%islimit/g, menu.limit ? '  ' : '')
+                .replace(/%isPremium/g, menu.premium ? '  ' : '')
                 .trim()
             }).join('\n')
           }),
@@ -157,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://nekopoi.care', 'Website', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), 'Spam bot = baned!!!', null, 'https://youtu.be/RMixpZRoDOk', 'Script bot', '', '', [
       ['Pemilik bot', '/owner']
     ], m)
     /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
