@@ -160,7 +160,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     conn.sendHydrated(m.chat, text.trim(), 'Spam bot = baned!!!', null, 'https://youtu.be/RMixpZRoDOk', 'Script bot', '', '', [
       ['Pemilik bot', '/owner']
     ], m)
-    let url = `https://telegra.ph/file/27bb43d3fe445f7249583.jpg`.trim()
+    /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -172,12 +172,22 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             hydratedFooterText:'Ⓟ premium | Ⓛ limit',
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/fardev78'
+                                    displayText: 'Website',
+                                    url: 'https://Ainebot.github.io/'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Donasi',
+                                    id: '/donasi'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Sewa',
+                                    id: '/sewa'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Pemilik bot',
+                                    displayText: 'Owner',
                                     id: '/owner'
                                 }
                             }]
