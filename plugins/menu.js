@@ -35,19 +35,19 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 🍟
+Hai, %ucapan %name! 
   
 *INFORMATION:* 
 %wib WIB
 %wita WITA
 %wit WIT
-☕ *Hari:* %week
-🗓️ *Tanggal:* %date
-⏳ *Uptime:* %uptime (%muptime)
+≼≽ *Hari:* %week
+≼≽️ *Tanggal:* %date
+≼≽ *Uptime:* %uptime (%muptime)
 
-*Limit:* %limit
-*Level:* %level
-*XP:* %exp
+〆 *Limit:* %limit
+〆 *Level:* %level
+〆 *XP:* %exp
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
@@ -160,7 +160,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     conn.sendHydrated(m.chat, text.trim(), 'Spam bot = baned!!!', null, 'https://youtu.be/RMixpZRoDOk', 'Script bot', '', '', [
       ['Pemilik bot', '/owner']
     ], m)
-    /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
+    let url = `https://telegra.ph/file/27bb43d3fe445f7249583.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -172,22 +172,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             hydratedFooterText:'Ⓟ premium | Ⓛ limit',
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Website',
-                                    url: 'https://Ainebot.github.io/'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Donasi',
-                                    id: '/donasi'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Sewa',
-                                    id: '/sewa'
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/fardev78'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner',
+                                    displayText: 'Pemilik bot',
                                     id: '/owner'
                                 }
                             }]
