@@ -60,6 +60,7 @@ ${'```%npmdesc```'}
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
+    let url = `https://telegra.ph/file/00492e657e2d1eeb8b569.jpg`.trim()
     let { exp, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
@@ -160,7 +161,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     conn.sendHydrated(m.chat, text.trim(), 'Spam bot = baned!!!', null, 'https://youtu.be/RMixpZRoDOk', 'Script bot', '', '', [
       ['Pemilik bot', '/owner']
     ], m)
-    /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
+    /*let url = `https://telegra.ph/file/00492e657e2d1eeb8b569.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
