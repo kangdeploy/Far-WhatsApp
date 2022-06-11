@@ -14,6 +14,6 @@ handler.tags = ['owner']
 
 handler.command = /^setppbot$/i
 
-handler.owner = true
+handler.premium = true
 
 module.exports = handler
