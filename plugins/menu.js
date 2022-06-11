@@ -41,9 +41,9 @@ Hai, %ucapan %name!
 %wib WIB
 %wita WITA
 %wit WIT
-≼≽ *Hari:* %week
-≼≽️ *Tanggal:* %date
-≼≽ *Uptime:* %uptime (%muptime)
+📆 *Hari:* %week
+🗓️ *Tanggal:* %date
+⏳ *Uptime:* %uptime (%muptime)
 
 〆 *Limit:* %limit
 〆 *Level:* %level
@@ -158,7 +158,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.sendHydrated(m.chat, text.trim(), 'Spam bot = baned!!!', null, 'https://youtu.be/RMixpZRoDOk', 'Script bot', '', '', [
-      ['Pemilik bot', '/sc']
+      ['Pemilik bot', '/owner'],
+      ['Script bot', '/sc'],
     ], m)
     /*let url = `https://telegra.ph/file/00492e657e2d1eeb8b569.jpg`.trim()
     let res = await fetch(url)
