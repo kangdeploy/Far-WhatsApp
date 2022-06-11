@@ -1,11 +1,12 @@
 let fs = require('fs')
 let handler = async (m) => {
-let helloaine = fs.readFileSync('./iya-apa-sayang.opus')
+let helloaine = fs.readFileSync('./tmpq7mpzzl9.opus')
 conn.sendFile(m.chat, helloaine, '', '', m, true)
 }
 
-handler.customPrefix = /^(bot)$/i
-handler.command = new RegExp
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = /^(menu|help|\?)$/i
 
 handler.limit = true
 handler.mods = false 

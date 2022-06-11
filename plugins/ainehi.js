@@ -1,7 +1,7 @@
 let fs = require('fs')
 const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn }) => {
-let helloaine = fs.readFileSync('./mp3/nani-meme-sound-effect.mp3') 
+let helloaine = fs.readFileSync('./mp3/nani-meme-sound-effect.opus') 
 conn.sendFile(m.chat, helloaine, '', '', m, true)
 //conn.sendMessage(m.chat, helloaine, MessageType.audio, {quoted: m, mimetype: 'audio/mp4', ptt:true})
 // await conn.sendMessage(m.chat, { audio: { url: helloaine }, mimetype: 'audio/mp4'}, m)
