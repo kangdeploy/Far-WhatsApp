@@ -5,52 +5,51 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
-  'rpgabsen': 'Rpg-Absen',
-  'rpg': 'Rpg',
-  'game': 'Game',
-  'xp': 'Exp, Limit & Pay',
-  'sticker': 'Sticker',
-  'main': 'Main',
-  'kerang': 'Kerang Ajaib',
-  'quotes': 'Quotes',
-  'admin': 'Admin',
-  'group': 'Group',
-  'internet': 'Internet',
-  'anonymous': 'Anonymous Chat',
-  'downloader': 'Downloader',
-  'berita': 'Berita',
-  'tools': 'Tools',
-  'fun': 'Fun',
-  'database': 'Database', 
-  'vote': 'Voting',
-  'absen': 'Absen',
-  'catatan': 'Catatan',
-  'jadian': 'Jadian',
-  'islami': 'Islami',
-  'owner': 'Owner',
-  'advanced': 'Advanced',
-  'info': 'Info',
-  'audio': 'Audio',
-  'maker': 'Maker',
+  'rpgabsen': '❏ *R P G - A B S E N*',
+  'rpg': '❏ *R P G - M E N U*',
+  'game': '❏ *G A M E S - M E N U*',
+  'xp': '❏ *EXP & L I M I T*',
+  'sticker': '❏ *C O N V E R T E R*',
+  'main': '❏ *M A I N - M E N U*',
+  'kerang': '❏ *K E R A N G - M E N U*',
+  'quotes': '❏ *Q U O T E S*',
+  'admin': '❏ *A D M I N - M E N U*',
+  'group': '❏ *G R O U P - M E N U*',
+  'internet': '❏ *I N T E R N E T*',
+  'anonymous': '❏ *A N O N Y M O U S*',
+  'downloader': '❏ *D O W N L O A D E R*',
+  'berita': '❏ *B E R I T A*',
+  'tools': '❏ *T O O L S - M E N U*',
+  'fun': '❏ *F U N - M E N U*',
+  'database': '❏ *D A T A - B O T*', 
+  'vote': '❏ *V O T I N G*',
+  'absen': '❏ *A B S E N*',
+  'catatan': '❏ *C A T A T A N*',
+  'jadian': '❏ *P A C A R A N*',
+  'islami': '❏ *I S L A M I*',
+  'owner': '❏ *D E V E L O P E R*',
+  'advanced': '❏ *E V A L - C O D E*',
+  'info': '❏ *I N F O R M A S I*',
+  'audio': '❏ *A U D I O - M E N U*',
+  'maker': '❏ *M A K E R - M E N U*',
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 
+Hai, %ucapan %name!👋 saya adaalah
+WhatsApp bot multi device yang di buat untuk mempermudah
+pekerjaan anda dalam menjadi beban
   
-╭─⧉ *INFORMATION*
-├ %wib WIB
-├ %wita WITA
-├ %wit WIT
-├ 📆 *Hari:* %week
-├ 🗓️ *Tanggal:* %date
-├ ⏳ *Uptime:* %uptime (%muptime)
-╰────────────┈⧉
-
-╭─⧉ *INFORMASI USER*
-〆 *Limit:* %limit
-〆 *Level:* %level
-〆 *XP:* %exp
-╰────────────
+╭───⧉ *INFORMATION*
+├❑ %wib WIB
+├❑ %wita WITA
+├❑ %wit WIT
+├❑ *Hari:* %week
+├❑ *Tanggal:* %date
+├❑ *Uptime:* %uptime (%muptime)
+├❑ *Limit:* %limit
+├❑ *Level:* %level
+├❑ *XP:* %exp
+╰────────┈
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
@@ -224,17 +223,17 @@ function clockString(ms) {
 
 function ucapan() {
         const hour_now = moment.tz('Asia/Jakarta').format('HH')
-        var ucapanWaktu = 'Pagi kak'
+        var ucapanWaktu = 'Pagi kak🌁'
         if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'Pagi kak'
+          ucapanWaktu = 'Pagi kak🏞️'
         } else if (hour_now >= '10' && hour_now <= '15') {
-          ucapanWaktu = 'Siang kak'
+          ucapanWaktu = 'Siang kak🏖️️'
         } else if (hour_now >= '15' && hour_now <= '17') {
-          ucapanWaktu = 'Sore kak'
+          ucapanWaktu = 'Sore kak🌇'
         } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'Selamat Petang kak'
+          ucapanWaktu = 'Selamat Petang kak🏙️'
         } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'Malam kak'
+          ucapanWaktu = 'Malam kak🌆'
         } else {
           ucapanWaktu = 'Selamat Malam!'
         }	
