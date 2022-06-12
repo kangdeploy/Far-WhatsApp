@@ -37,17 +37,20 @@ const defaultMenu = {
   before: `
 Hai, %ucapan %name! 
   
-*INFORMATION:* 
-%wib WIB
-%wita WITA
-%wit WIT
-📆 *Hari:* %week
-🗓️ *Tanggal:* %date
-⏳ *Uptime:* %uptime (%muptime)
+╭─⧉ *INFORMATION*
+├ %wib WIB
+├ %wita WITA
+├ %wit WIT
+├ 📆 *Hari:* %week
+├ 🗓️ *Tanggal:* %date
+├ ⏳ *Uptime:* %uptime (%muptime)
+╰────────────┈⧉
 
+╭─⧉ *INFORMASI USER*
 〆 *Limit:* %limit
 〆 *Level:* %level
 〆 *XP:* %exp
+╰────────────
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
