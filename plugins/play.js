@@ -9,7 +9,6 @@ let handler = async (m, { conn, command, usedPrefix, text, isPrems, isOwner }) =
   let vid = results.all.find(video => video.seconds < 3600)
   if (!vid) throw 'Video/Audio Not Found'
   let isVideo = /2$/.test(command)
-  const sentMsg = await m.reply('⏳ *_Wait ana bot is processing..._*')
   let yt = false
   let usedServer = servers[0]
   for (let i in servers) {
